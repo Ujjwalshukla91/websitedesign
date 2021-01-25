@@ -79,25 +79,83 @@ function valiDate(){
     var d =document.getElementById("mobile").value;
     var e =document.getElementById("mail").value;
 
-    if(a ==""){
-        document.getElementById("username").innerHTML="*-please fill the username-*";
-        return false;
+    if(a == ""){
+        document.getElementById("username").innerHTML="*please fill the username*";
+         
+    }else if((a.length <= 5) || (a.length >= 20)){
+        document.getElementById("username").innerHTML="*input must be 2 to 20 *";
+    }else{
+        document.getElementById("username").innerHTML="";
     }
-    if(a ==""){
+    
+    /* if(!isNaN(a)){
+        document.getElementById("username").innerHTML="*only chracter are allowed *";
+    }
+    else{
+        document.getElementById("username").innerHTML="";
+    }
+ */
+
+    if(b == ""){
         document.getElementById("password").innerHTML="please fill the password";
-        return false;
+         
     }
-    if(a ==""){
+    else if((b.length <= 5) || (b.length >= 20)){
+        document.getElementById("password").innerHTML="*-input must be 5 to 20 -*";
+    }
+    
+    else if(b!= c){
+        document.getElementById("password").innerHTML="*-password are not same -*";
+    }
+
+    else{
+        document.getElementById("password").innerHTML="";
+    }
+
+    
+    if(c == ""){
         document.getElementById("confirmpass").innerHTML="please fill the confirmpassword";
-        return false;
+        
     }
-    if(a ==""){
+    else{
+        document.getElementById("confirmpass").innerHTML="";
+    }
+
+    
+    if(d == ""){
         document.getElementById("mobileno").innerHTML="please fill the mobile number";
-        return false;
+        
     }
-    if(a ==""){
+    if(isNaN(d)){
+        document.getElementById("mobileno").innerHTML="Input only chracter";
+    }
+    if(d.length!=10){
+        document.getElementById("mobileno").innerHTML="mobile number must be 10 digits";
+    }
+    else{
+        document.getElementById("mobileno").innerHTML="";
+    }
+
+
+    if(e ==""){
         document.getElementById("gmails").innerHTML="please fill the gmail id";
-        return false;
+        
+    }
+    if(e.indexOf('@') <= 0){
+        document.getElementById("gmails").innerHTML="@ invalid position";
+    }
+    if((e.charAt(e.length-4)!='.') && (e.charAt(e.length-3)!='.')){
+        document.getElementById("gmails").innerHTML=" . invalid position";
+    }
+    else{
+        document.getElementById("gmails").innerHTML="";
     }
 }
+
+var btn =document.getElementById("submit");
+btn.addEventListener("click",function(e){
+    e.preventDefault();
+    var i=valiDate();
+    i;
+})
 
