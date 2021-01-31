@@ -72,7 +72,7 @@ target.addEventListener("click",function(e){
 nameAge(a,29);
 })  */
 
-function valiDate(){
+/* function valiDate(){
     var a =document.getElementById("user").value;
     var b =document.getElementById("pass").value;
     var c =document.getElementById("conpass").value;
@@ -96,7 +96,7 @@ function valiDate(){
     }
  */
 
-    if(b == ""){
+    /* if(b == ""){
         document.getElementById("password").innerHTML="please fill the password";
          
     }
@@ -159,3 +159,62 @@ btn.addEventListener("click",function(e){
     i;
 })
 
+ */
+
+ /* function passValidate(){
+     var passw=document.getElementById("password").value;
+     var cpass =document.getElementById("conpass").value;
+     
+    if(passw == ""){
+        document.getElementById("pass").innerHTML="*-please fill the password";
+    }
+    else if(passw.length <= 5){
+        document.getElementById("pass").innerHTML="*-password length is greater than 5";
+    }
+    if(passw.length >= 20){
+        document.getElementById("pass").innerHTML="*-password length is must be 20";
+    }
+    
+
+    if(passw!=cpass){
+        document.getElementById("pass").innerHTML="*-password are not same";
+    }
+    else{
+        document.getElementById("username").innerHTML="";
+    }
+ }
+
+
+
+ var btn =document.getElementById("submit");
+ btn.addEventListener("click",function(e){
+    e.preventDefault();
+    var a =passValidate();
+    a;
+ }) */
+
+ /* var ary =[10,20,30,40,50];
+ for(var a=0; a<=4; a++){
+     document.write(ary[a] + <br></br>)
+ } */
+
+/*  let firstName ="ujjwal";
+ let lastName ="shukla";
+ function fullname(firstName,lastName){
+    return `$`
+ }
+ */
+
+ //vue js
+
+
+ new Vue({
+     el:"#app",
+     data:{
+        message: "hello ujjwal",
+        lastname:"shukla",
+        fullname:function(){
+            return this.message + " " + this.lastname;
+        }
+     }
+ });
